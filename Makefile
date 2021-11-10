@@ -31,7 +31,6 @@ st: $(OBJ)
 
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz
-	rm config.h
 
 dist: clean
 	mkdir -p st-$(VERSION)
@@ -54,5 +53,6 @@ install: st
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
+	rm config.h
 
 .PHONY: all options clean dist install uninstall
